@@ -72,6 +72,9 @@ a:hover {
     /*border-radius: 10px;*/
     margin-bottom: 20px;
 }
+textarea {
+    resize: none;
+}
 
 .btn {
     display: inline-block;
@@ -84,4 +87,25 @@ a:hover {
     /* margin-top: 5px; */
     font-family: inherit;
 
+}
+
+/* ------ style of note list page ------- */ 
+.note-wrapper {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.note {
+
+}
+
+.delete {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3746c8;
+    color: white;
 }

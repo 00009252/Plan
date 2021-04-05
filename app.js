@@ -18,7 +18,7 @@ app.get('/create', (req, res) => {
 const notes = ['Some awesome titles', 'Some awesome titles 2']
 
 app.get('/notes', (req, res) => {
-    res.render('notes', { notes: note })
+    res.render('notes', { notes: notes })
 })
 
 app.listen(3000, err => {
