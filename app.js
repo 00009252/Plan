@@ -28,8 +28,10 @@ app.post('/create', (req, res) => {
     if(title.trim() === '' && description.trim() === '') {
         res.render('create', { error: true })
     } else {
-        fs.readFile('./data/notes.json', (err, data) => { //('./data/notes.json')
+        fs.readFile('./data/notes.json', (err, data) => { 
             if(err) throw err
+
+            //console.log("HEREEEEE")
 
             const notes = JSON.parse(data)
 
@@ -39,15 +41,16 @@ app.post('/create', (req, res) => {
                 description: description,
             })
 
-            fs.writeFile('./data/notes.json',JSON.stringify(notes)),err => { //('./data/notes.json')
+            //console.log("HEREEEEE222222")
+
+            fs.writeFile('./data/notes.json', JSON.stringify(notes), err => {
                 if (err) throw err
 
-                res.render('create', {success: true})
-            }
+                res.render('create', { success: true })
+            })
         })
     }
 
-    res.render('create')
 })
 
 //const notes = ['Some awesome titles', 'Some awesome titles 2']
