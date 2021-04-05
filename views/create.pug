@@ -4,6 +4,9 @@ block content
     div.container 
         h1 Create note 
 
+        if error 
+            p.error Empty submission! 
+
         form.form(action="/create" method='POST')
             label Title 
             input.input(type="text" name="title")
