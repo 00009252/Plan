@@ -25,4 +25,4 @@ node app
 
 ### Web Application repository on GitHub
 
-[link to github repository] (https://github.com/00009252/notes.git)
+link to github repository (https://github.com/00009252/notes.git)
