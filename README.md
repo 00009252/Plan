@@ -6,7 +6,7 @@ In order to run the web app locally, you need to follow the given steps indicate
 
 1. Clone this repository via GitHub
 ```bash
-git clone [repository link]
+git clone https://github.com/00009252/notes
 ```
 2. Install dependencies
 ```bash
@@ -25,4 +25,4 @@ node app
 
 ### Web Application repository on GitHub
 
-[https://github.com/00009252/notes]
+[link to github repository] (https://github.com/00009252/notes.git)
