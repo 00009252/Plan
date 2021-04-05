@@ -28,28 +28,54 @@ app.post('/create', (req, res) => {
     if(title.trim() === '' && description.trim() === '') {
         res.render('create', { error: true })
     } else {
-        fs.readFile('./data/notes.json', (err, data) => {
+        fs.readFile('./data/notes.json', (err, data) => { //('./data/notes.json')
             if(err) throw err
 
             const notes = JSON.parse(data)
 
             notes.push({
+                id: id(),
                 title: title,
                 description: description,
             })
+
+            fs.writeFile('./data/notes.json',JSON.stringify(notes)),err => { //('./data/notes.json')
+                if (err) throw err
+
+                res.render('create', {success: true})
+            }
         })
     }
 
     res.render('create')
 })
 
-const notes = ['Some awesome titles', 'Some awesome titles 2']
+//const notes = ['Some awesome titles', 'Some awesome titles 2']
 
 app.get('/notes', (req, res) => {
-    res.render('notes', { notes: notes })
-})
 
-app.get('/notes/detail', (req, res) => {
+    fs.readFile('./data/notes.json', (err, data) => {
+        if(err) throw err
+
+        const notes = JSON.parse(data) 
+
+        res.render('notes', { notes: notes })
+    })
+})
+/* ---- Resposible for Note details ---- */
+app.get('/notes/:id', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/notes.json', (err, data) => {
+        if(err) throw err
+
+        const notes = JSON.parse(data) 
+
+        const note = notes.filter(note => note.id == id)[0] 
+
+        res.render('detail', {note: note})
+    })
+
     res.render('detail')
 })
 
@@ -58,3 +84,7 @@ app.listen(3000, err => {
 
     console.log('Server is running on port 3000...')
 })
+
+function id () {
+    return '_' + Math.random().toString(36).substr(2,9); 
+}

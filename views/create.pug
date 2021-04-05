@@ -7,6 +7,9 @@ block content
         if error 
             p.error Empty submission! 
 
+        if success 
+            p.success Completed!
+
         form.form(action="/create" method='POST')
             label Title 
             input.input(type="text" name="title")

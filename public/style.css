@@ -114,9 +114,19 @@ textarea {
 .error {
     display: inline-block;
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0px 5px 0;
     border: 1px solid red;
     border-radius: 5px;
     font-size: 1.2rem;
     color: red;
+}
+
+.success {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 0px 5px 0;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: green;
 }
