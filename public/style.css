@@ -1,6 +1,7 @@
 :root {
     font-size: 18px;
-    color: #444;
+    color: #e68517;
+    background-color: #444;
 }
 
 *{
@@ -8,7 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     /*background:url(4.jpg) repeat center center fixed;
-    /*-webkit-background-size: cover;
+    -webkit-background-size: cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;*/
@@ -20,18 +21,22 @@ a {
 }
 
 a:hover {
-    color: #3746c8;
+    color: #444;
 
 }
 
 .navbar {
-    max-width: 1000px;
+    background-color: #e68517;
+    color: ivory;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     border-bottom: 1px dotted #ccc;
     padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .nav a {
@@ -41,10 +46,12 @@ a:hover {
 
 /* style of homepage */
 .container {
-    color: inherit;
-    max-width: 1000px;
+    /* background-color: rgb(177, 2, 2); */
+    color: 444;
+    max-width: 100%;
     margin: 0 auto;
     padding: 10px;
+    padding-left: 100px;
     /* background:url(4.jpg) no-repeat center center fixed; */
     /*-webkit-background-size: cover;
     -moz-background-size:cover;
@@ -59,10 +66,29 @@ a:hover {
 .featured {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3746c8;
+    background-color: #e68517;
     border-radius: 10px;
     color: white;
+    margin-bottom: 50px;
 }
+
+/* ---- style of footer part ---- */
+.footer {
+    background-color: #e68517;
+    color: white   ;
+}
+.last-msg {
+    text-align: center;
+    padding: 52px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.last-msg:hover {
+    color: #444;
+    cursor: pointer;
+}
+
+
 
 /* style of create page */
 .form {
@@ -82,14 +108,18 @@ a:hover {
     border-bottom: 1px solid;
     /*border-radius: 10px;*/
     margin-bottom: 20px;
+    background-color: #444;
+    color: whitesmoke;
 }
 textarea {
     resize: none;
+    background-color: #444;
+    color: whitesmoke;
 }
 
 .btn {
     display: inline-block;
-    background-color: #3746c8;
+    background-color: #e68517;
     color: white;
     font-size: 1.3rem;
     border: none;
@@ -107,7 +137,7 @@ textarea {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #e68517;
 }
 
 .note {
@@ -117,7 +147,7 @@ textarea {
 .delete {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #d41c1c;
+    background-color: #e68517;
     border-radius: 5px;
     color: white;
 }
