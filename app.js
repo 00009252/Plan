@@ -86,10 +86,12 @@ app.get('/notes/:id', (req, res) => {
 
         const note = notes.filter(note => note.id == id)[0] 
 
-        res.render('detail', {note: note})
+        res.render('detail', { note: note })
+
+        // res.render('detail', { notes: notes })
     })
 
-    res.render('detail')
+    //res.render('detail')
 })
 
 app.listen(3000, err => {
