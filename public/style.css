@@ -7,6 +7,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*background:url(4.jpg) repeat center center fixed;
+    /*-webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;*/
 }
 
 a {
@@ -36,9 +41,15 @@ a:hover {
 
 /* style of homepage */
 .container {
+    color: inherit;
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
+    /* background:url(4.jpg) no-repeat center center fixed; */
+    /*-webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;*/
 }
 .intro-msg{
     padding: 100px 0 30px 0;
